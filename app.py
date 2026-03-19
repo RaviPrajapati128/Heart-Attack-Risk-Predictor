@@ -100,7 +100,7 @@ Your results should be seen as a guide to better understand how lifestyle and he
 
 💡 *Think of this tool as a way to learn more about your numbers and habits — but always rely on your doctor for medical decisions.*
 """)
-
+st.write("---")
         
 
 
