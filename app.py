@@ -52,7 +52,7 @@ physical_activity = st.number_input("Physical Activity (hours/week)", min_value=
 sleep_hours = st.slider("Sleep Hours per Night", 0.0, 12.0, 7.0)
 
 # Family & Diet
-family_history = st.number_input("Family History of Heart Disease (1 = Yes, 10 = No)",min_value=0, max_value=1, value=0)
+family_history = st.number_input("Family History of Heart Disease (1 = Yes, 0 = No)",min_value=0, max_value=1, value=0)
 diet_quality = st.slider("Diet Quality Score (1 = Poor, 10 = Excellent)", 1, 10, 6)
 alcohol_units = st.number_input("Alcohol Units per Week", min_value=0.0, max_value=50.0, value=5.0)
 
