@@ -56,26 +56,6 @@ family_history = st.number_input("Family History of Heart Disease (1 = Yes, 0 = 
 diet_quality = st.slider("Diet Quality Score (1 = Poor, 10 = Excellent)", 1, 10, 6)
 alcohol_units = st.number_input("Alcohol Units per Week", min_value=0.0, max_value=50.0, value=5.0)
 
-# Output placeholder
-st.write("### Your inputs summary:")
-st.write({
-    "Age": age,
-    "BMI": bmi,
-    "Systolic BP": systolic_bp,
-    "Diastolic BP": diastolic_bp,
-    "Cholesterol": cholesterol,
-    "Resting HR": resting_hr,
-    "Smoking Status": smoking_status,
-    "Daily Steps": daily_steps,
-    "Stress Level": stress_level,
-    "Physical Activity": physical_activity,
-    "Sleep Hours": sleep_hours,
-    "Family History": family_history,
-    "Diet Quality": diet_quality,
-    "Alcohol Units": alcohol_units
-})
-
-
 user_input = np.array([[
     age,
     bmi,
@@ -110,7 +90,7 @@ if st.button("Predict Risk"):
     else:
         st.error(predict[0])
         st.error(f"Predicted Risk: {predict1[0]:.2f}%")
-
+st.write("---")
 st.markdown("""
 ⚠️ **Disclaimer**
 
