@@ -5,7 +5,7 @@ import streamlit as st
 st.title("Heart Attack Risk Predictor")
 st.markdown("Know your risk, take charge of your heart ❤️")
 
-data = pd.read_csv(r"C:\Users\ADMIN\Downloads\cardiovascular_risk_dataset.csv")
+data = pd.read_csv("cardiovascular_risk_dataset.csv")
 
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
