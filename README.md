@@ -1,6 +1,6 @@
 # Heart-Attack-Risk-Predictor
 
-An interactive **Streamlit application** that estimates heart attack risk using a **Logistic Regression model** trained on health and lifestyle data.  
+An interactive **Streamlit application** that estimates heart attack risk using a **Linear Regression model** trained on health and lifestyle data.  
 Users can input factors such as age, BMI, blood pressure, cholesterol, smoking status, physical activity, sleep, and family history to receive a personalized risk assessment.
 
 ---
@@ -14,7 +14,7 @@ The app provides a simple interface for users to explore how everyday choices an
 ## ✨ Features
 - User‑friendly Streamlit interface
 - Collects 14+ health and lifestyle inputs
-- Logistic Regression and Linear Regression model for risk prediction
+- Linear Regression model for risk prediction
 - Displays risk as percentage probability
 - Includes disclaimer for educational use only
 
@@ -23,7 +23,7 @@ The app provides a simple interface for users to explore how everyday choices an
 ## 🛠 Tech Stack
 - **Python** (NumPy, pandas, scikit‑learn)
 - **Streamlit** (interactive web app)
-- **Machine Learning** (Logistic Regression & Linear Regression)
+- **Machine Learning** (Linear Regression)
 
 ---
 
