@@ -24,12 +24,12 @@ le = LabelEncoder()
 data["smoking_status"] = le.fit_transform(data["smoking_status"])
 data["family_history_heart_disease"] = le.fit_transform(data["family_history_heart_disease"])
 
-x = data.drop(columns=["risk_category","heart_disease_risk_score"], axis=1)
-y = data["risk_category"]
+#x = data.drop(columns=["risk_category","heart_disease_risk_score"], axis=1)
+#y = data["risk_category"]
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42, test_size=0.2)
-lr = LogisticRegression()
-lr.fit(x_train, y_train)
+#x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42, test_size=0.2)
+#lr = LogisticRegression()
+#lr.fit(x_train, y_train)
 
 X = data.drop(columns=["risk_category","heart_disease_risk_score"], axis=1)
 Y = data["heart_disease_risk_score"]
@@ -88,21 +88,14 @@ user_input = np.array([[
     sleep_hours, family_history, diet_quality, alcohol_units
 ]])
 
-predict = lr.predict(user_input)
+#predict = lr.predict(user_input)
 predict1 = l.predict(user_input)
 
 if st.button("🔍 Predict Risk",use_container_width=True):
     st.subheader("Risk of Heart Attack")
 
-    if predict == "Low":
-        st.success(f"✅ Low Risk\nPredicted Score: {predict1[0]:.2f}%")
-        st.progress(int(predict1[0]))
-    elif predict == "Medium":
-        st.warning(f"⚠️ Medium Risk\nPredicted Score: {predict1[0]:.2f}%")
-        st.progress(int(predict1[0]))
-    else:
-        st.error(f"❌ High Risk\nPredicted Score: {predict1[0]:.2f}%")
-        st.progress(int(predict1[0]))
+    st.success(f"\nPredicted Score: {predict1[0]:.2f}%")
+    st.progress(int(predict1[0]))
 
 st.divider()
 
