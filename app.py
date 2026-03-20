@@ -91,7 +91,7 @@ user_input = np.array([[
 predict = lr.predict(user_input)
 predict1 = l.predict(user_input)
 
-if st.button("🔍 Predict Risk"):
+if st.button("🔍 Predict Risk",use_container_width=True):
     st.subheader("Risk of Heart Attack")
 
     if predict == "Low":
