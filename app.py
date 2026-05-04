@@ -20,6 +20,8 @@ st.divider()
 # -------------------------------
 data = pd.read_csv("cardiovascular_risk_dataset.csv")
 
+data.drop("risk_category",axis = 1, inplace = True)
+
 le = LabelEncoder()
 data["smoking_status"] = le.fit_transform(data["smoking_status"])
 data["family_history_heart_disease"] = le.fit_transform(data["family_history_heart_disease"])
@@ -31,7 +33,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42, test_
 lr = LogisticRegression()
 lr.fit(x_train, y_train)
 
-X = data.drop(columns=["risk_category","heart_disease_risk_score"])
+X = data.drop("heart_disease_risk_score",axis = 1)
 Y = data["heart_disease_risk_score"]
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, random_state=42, test_size=0.2)
