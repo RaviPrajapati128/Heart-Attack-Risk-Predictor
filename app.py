@@ -26,7 +26,7 @@ le = LabelEncoder()
 data["smoking_status"] = le.fit_transform(data["smoking_status"])
 data["family_history_heart_disease"] = le.fit_transform(data["family_history_heart_disease"])
 
-x = data.drop(columns=["risk_category","heart_disease_risk_score"], axis=1)
+x = data.drop("heart_disease_risk_score", axis=1)
 y = data["risk_category"]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42, test_size=0.2)
